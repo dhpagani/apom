@@ -1,0 +1,9 @@
+---
+shared:
+  image: maven
+jobs:
+  # 1. Validate templates
+  validate_templates:
+    requires: [~pr, ~commit]
+    steps:
+    - install_prerequisites: mvn install
